@@ -1,0 +1,68 @@
+public class Main {
+    
+    static void multiplication_table(int n){
+        for(int i=1;i<11;i++){
+            System.out.println(n+"*"+i+"="+(n*i));  
+        }
+    }
+    
+    static void prime_num(int a){
+        int count=0;
+        for(int i=2;i<=a/2;i++){
+            if(a%i==0){
+                count++;
+            }
+        }
+        if(count==0)
+        System.out.println(a+" is a prime number");
+        else
+        System.out.println(a+" is not prime nubmer");  
+    }
+    
+    public static void main(String[] args) {
+        
+        int a=3,b=2,i,sum=0,sum2=0,sum3=0;
+        System.out.println("Let, a=3 & b=2");
+        System.out.println("Addition = "+(a+b));
+        System.out.println("Multiply = "+(a*b));
+        System.out.println("Subtract = "+(a-b));
+        
+        int [] arr={10,15,20,25,30,35};
+        System.out.println("Let, array elements - 10,15,20,25,30,35");
+        for(i=0;i<arr.length;i++){
+            sum=sum+arr[i];
+        }
+        System.out.println("Sum of the array elements = "+(sum));
+        System.out.println("Average of the array elements = "+((double)sum/arr.length));
+        
+        int count=0;
+        System.out.println("Even numbers:");
+        for(i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+            System.out.println(arr[i]);    
+            sum2=sum2+arr[i];
+            count++;
+            }
+        }
+        System.out.println("Sum of the even numbers = "+(sum2));
+        System.out.println("Average of the even numbers = "+((double)sum2/count));
+        
+        count=0;
+        System.out.println("Odd numbers:");
+        for(i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+            System.out.println(arr[i]);
+            sum3=sum3+arr[i];
+            count++;
+            }
+        }
+        System.out.println("Sum of the odd numbers = "+(sum3));
+        System.out.println("Average of the odd numbers = "+((double)sum3/count));
+        
+        System.out.println("Multiplication table of 12:");
+        multiplication_table(12);
+        
+        System.out.println("Prime number:");
+        prime_num(12);
+    }
+}
