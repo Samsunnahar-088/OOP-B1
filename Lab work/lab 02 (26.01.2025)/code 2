@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Rectangle
+{
+    double length;
+    double width;
+    
+    public void insertData(){
+        Scanner input = new Scanner(System.in);
+        length=input.nextDouble();
+        width=input.nextDouble();
+    }
+    public void display(){
+        System.out.println("length="+length+" width="+width);
+    }
+    public void area(){
+        System.out.println("Area="+(length*width));
+    }
+    
+	public static void main(String[] args) {
+	    Rectangle r1 =new Rectangle();
+	    Rectangle r2 =new Rectangle();
+	    r1.insertData();
+	    r1.display();
+	    r1.area(); 
+	    r2.insertData();
+	    r2.display();
+	    r2.area();
+	    
+	}
+}
