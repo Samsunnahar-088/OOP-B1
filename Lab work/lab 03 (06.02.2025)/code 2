@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class Shape
+{
+    double height;
+    double width;
+    double radius;
+    //int base;
+    public Shape(double height,double width,double radius){
+        this.height=height;
+        this.width=width;
+        this.radius=radius;
+    }
+    public Shape(){
+       System.out.println("Object Created"); 
+    }
+    public double area(double height,double width){
+        return height*width;
+    }
+    public double area(double radius){
+        return 3.1416*radius;
+    }
+    /*public double area(double height,int base){
+        return 0.5*height*base;
+    }
+    public double area(double height){
+        return height*height;
+    }*/
+
+    public void display(){
+     System.out.println("Height="+height+" Width="+width+" Radius="+radius);   
+    }
+    
+	public static void main(String[] args) {
+	    //Scanner input=new Scanner(System.in);
+	    Shape obj1=new Shape(50.6,20.5,30.5);
+	    Shape obj2=new Shape();
+	    //obj1.height=input.nextDouble();
+	    //obj1.width=input.nextDouble();
+	    //obj1.radius=input.nextDouble();
+	    //obj1.base=input.nextInt();
+        double x= obj1.area(obj1.height,obj1.width);
+        double y=obj1.area(obj1.radius);
+        obj1.display();
+        obj2.display();
+        //double z= obj1.area(obj1.height);
+        //double m=obj1.area(obj1.height,obj1.base);
+
+	}
+}
